@@ -1,44 +1,70 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>백은의 별</title><style>
-*{box-sizing:border-box}body{margin:0;background:#101522;color:#e8edf7;font-family:system-ui,sans-serif}header{text-align:center;padding:75px 20px 48px;background:radial-gradient(ellipse at top,#34435e,transparent 75%)}header small{letter-spacing:.35em;color:#a6b7d1}h1{font-family:Georgia,'Batang',serif;font-size:clamp(36px,8vw,60px);font-weight:400;letter-spacing:.15em;margin:18px 0}header p,footer,.muted{color:#a6b7d1}main{max-width:760px;margin:auto;padding:24px 18px 60px}h2{font-size:18px;letter-spacing:.1em}button{font:inherit;color:inherit;cursor:pointer;background:#202b3e;border:1px solid #3b4960;border-radius:8px;padding:12px 16px}button:disabled{opacity:.35;cursor:default}.episode{display:flex;width:100%;align-items:center;gap:18px;text-align:left;margin:12px 0;padding:12px}.thumb{width:90px;height:100px;object-fit:cover;border-radius:5px;background:#303e55}.placeholder{display:grid;place-items:center;color:#c3d0e4;font-size:30px;flex-shrink:0}.episode strong{display:block;margin:8px 0}.episode span:last-child{margin-left:auto}nav{display:flex;justify-content:space-between;gap:8px;margin:24px 0}.pages img{display:block;width:100%;height:auto;margin:0 auto}.pages{background:#fff}.notice{padding:32px;text-align:center;color:#a6b7d1;background:#202b3e}footer{text-align:center;padding:25px;font-size:12px;letter-spacing:.1em}a{color:inherit}[hidden]{display:none!important}
-
-.genre-tag {
-  display: inline-block;
-  padding: 6px 14px;
-  border: 1px solid #414c6a;
-  border-radius: 30px;
-  background: rgba(168, 185, 238, 0.05);
-  color: #b8c5e4;
-  font-size: 12px;
-}
-
-</style></head><body>
-
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>백은의 별</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#101522;color:#e8edf7;font-family:system-ui,sans-serif}header{text-align:center;padding:75px 20px 48px;background:radial-gradient(ellipse at top,#34435e,transparent 75%)}header small{letter-spacing:.35em;color:#a6b7d1}h1{font-family:Georgia,'Batang',serif;font-size:clamp(36px,8vw,60px);font-weight:400;letter-spacing:.15em;margin:18px 0}header p,footer,.muted{color:#a6b7d1}main{max-width:760px;margin:auto;padding:24px 18px 60px}h2{font-size:18px;letter-spacing:.1em}button{font:inherit;color:inherit;cursor:pointer;background:#202b3e;border:1px solid #3b4960;border-radius:8px;padding:12px 16px}button:disabled{opacity:.35;cursor:default}.episode{display:flex;width:100%;align-items:center;gap:18px;text-align:left;margin:12px 0;padding:12px}.thumb{width:90px;height:100px;object-fit:cover;border-radius:5px;background:#303e55;flex-shrink:0}.placeholder{display:grid;place-items:center;color:#c3d0e4;font-size:30px;flex-shrink:0}.episode strong{display:block;margin:8px 0}.episode span:last-child{margin-left:auto}nav{display:flex;justify-content:space-between;gap:8px;margin:24px 0}.pages img{display:block;width:100%;height:auto;margin:0 auto}.pages{background:#fff}.notice{padding:32px;text-align:center;color:#a6b7d1;background:#202b3e}footer{text-align:center;padding:25px;font-size:12px;letter-spacing:.1em}a{color:inherit}[hidden]{display:none!important}
+.genre-tag{display:inline-block;padding:6px 14px;border:1px solid #414c6a;border-radius:30px;background:rgba(168,185,238,.05);color:#b8c5e4;font-size:12px}
+</style>
+</head>
+<body>
 <header>
   <small>✦</small>
   <h1>백은의 별</h1>
-
-  <div style="
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 24px 0;
-  ">
+  <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:24px 0">
     <span class="genre-tag">#현대판타지</span>
     <span class="genre-tag">#헌터물</span>
     <span class="genre-tag">#액션</span>
     <span class="genre-tag">#미스터리</span>
   </div>
-
-  <small style="font-size: 11px;">
-    작가 루아
-  </small>
+  <small style="font-size:11px">작가 루아</small>
 </header>
-
-<main><section id="list"><h2>EPISODES · 회차 목록</h2><div id="episodes"></div></section><section id="reader" hidden><button onclick="location.hash=''">← 전체 목록</button><h2 id="episodeTitle"></h2><div class="pages" id="pages"></div><nav><button id="prev">← 이전 화</button><button onclick="location.hash=''">목록</button><button id="next">다음 화 →</button></nav></section></main><footer>✧ &nbsp; 백은의 별 · by Lua &nbsp; ✧</footer><script>
-// 회차 추가: 아래 배열에 제목과 이미지 파일명을 입력하세요. 이미지 파일은 index.html과 같은 저장소에 올리면 됩니다.
+<main>
+  <section id="list"><h2>EPISODES · 회차 목록</h2><div id="episodes"></div></section>
+  <section id="reader" hidden>
+    <button onclick="location.hash=''">← 전체 목록</button>
+    <h2 id="episodeTitle"></h2>
+    <div class="pages" id="pages"></div>
+    <nav><button id="prev">← 이전 화</button><button onclick="location.hash=''">목록</button><button id="next">다음 화 →</button></nav>
+  </section>
+</main>
+<footer>✧ &nbsp; 백은의 별 · 작가 루아 &nbsp; ✧</footer>
+<script>
+// 회차 추가: 이미지 파일은 index.html과 같은 위치에 업로드하세요.
 const episodes = [
- {title:'제1화', images:[]},
- // {title:'제2화', images:['02-01.jpg','02-02.jpg']},
+  {title:'제1화', thumbnail:'thumb01.jpg', image:'ep01.jpg'},
+  // {title:'제2화', thumbnail:'thumb02.jpg', image:'ep02.jpg'},
 ];
-const $=id=>document.getElementById(id);function go(i){location.hash='episode-'+(i+1)}function render(){const m=location.hash.match(/^#episode-(\d+)$/);const i=m?Number(m[1])-1:-1;const ep=episodes[i];$('list').hidden=!!ep;$('reader').hidden=!ep;if(!ep){$('episodes').replaceChildren();episodes.forEach((e,j)=>{const b=document.createElement('button');b.className='episode';b.onclick=()=>go(j);let thumb;if(e.images.length){thumb=document.createElement('img');thumb.src=e.images[0];thumb.alt='';thumb.className='thumb'}else{thumb=document.createElement('div');thumb.className='thumb placeholder';thumb.textContent='✦'}const t=document.createElement('div');const s=document.createElement('small');s.className='muted';s.textContent='EPISODE '+String(j+1).padStart(2,'0');const strong=document.createElement('strong');strong.textContent=e.title;t.append(s,strong);const arrow=document.createElement('span');arrow.textContent='›';b.append(thumb,t,arrow);$('episodes').append(b)})}else{$('episodeTitle').textContent=ep.title;$('pages').replaceChildren();if(!ep.images.length){const n=document.createElement('div');n.className='notice';n.textContent='아직 등록된 만화 이미지가 없습니다.';$('pages').append(n)}ep.images.forEach((src,j)=>{const img=document.createElement('img');img.src=src;img.alt=ep.title+' '+(j+1)+'페이지';img.loading=j===0?'eager':'lazy';$('pages').append(img)});$('prev').disabled=i===0;$('next').disabled=i===episodes.length-1;$('prev').onclick=()=>go(i-1);$('next').onclick=()=>go(i+1)}window.scrollTo(0,0)}window.addEventListener('hashchange',render);render();</script></body></html>
+const $ = id => document.getElementById(id);
+function go(i){location.hash='episode-'+(i+1)}
+function placeholder(){const d=document.createElement('div');d.className='thumb placeholder';d.textContent='✦';return d}
+function notice(message){const n=document.createElement('div');n.className='notice';n.textContent=message;return n}
+function render(){
+  const m=location.hash.match(/^#episode-(\d+)$/);
+  const i=m?Number(m[1])-1:-1;
+  const ep=episodes[i];
+  $('list').hidden=!!ep;$('reader').hidden=!ep;
+  if(!ep){
+    $('episodes').replaceChildren();
+    episodes.forEach((e,j)=>{
+      const b=document.createElement('button');b.className='episode';b.onclick=()=>go(j);
+      let thumb=placeholder();
+      if(e.thumbnail){thumb=document.createElement('img');thumb.className='thumb';thumb.alt='';thumb.onerror=()=>thumb.replaceWith(placeholder());thumb.src=e.thumbnail}
+      const t=document.createElement('div');const s=document.createElement('small');s.className='muted';s.textContent='EPISODE '+String(j+1).padStart(2,'0');
+      const strong=document.createElement('strong');strong.textContent=e.title;t.append(s,strong);
+      const arrow=document.createElement('span');arrow.textContent='›';b.append(thumb,t,arrow);$('episodes').append(b);
+    });
+  }else{
+    $('episodeTitle').textContent=ep.title;$('pages').replaceChildren();
+    if(ep.image){const img=document.createElement('img');img.alt=ep.title;img.onerror=()=>img.replaceWith(notice('만화 이미지를 불러올 수 없습니다.'));img.src=ep.image;$('pages').append(img)}
+    else{$('pages').append(notice('아직 등록된 만화 이미지가 없습니다.'))}
+    $('prev').disabled=i===0;$('next').disabled=i===episodes.length-1;$('prev').onclick=()=>go(i-1);$('next').onclick=()=>go(i+1);
+  }
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',render);render();
+</script>
+</body>
+</html>
